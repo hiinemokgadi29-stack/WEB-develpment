@@ -1,5 +1,5 @@
 # Sephaphoshe NPO Web Development Project
-
+HIINE MOKGADI PRUDENCE
 ## Project Description
 A 5-page semantic HTML website developed for the Sephaphoshe Old Age & Day Care Centre to attract corporate sponsors, water engineers, and community volunteers to assist with infrastructural rebuilding.
 
