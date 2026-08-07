@@ -1,8 +1,7 @@
 
 <html>
 <head>
-    <title>Enquiry - Sephapose Publisher</title>
-    
+       
 </head>
 <body>
 
@@ -15,8 +14,70 @@
     </nav>
     <hr>
 
-    <h1>Enquiry Sephapose Publisher</h1>
-    <p>This page will tell our history and publishing story.</p>
+    
 
 </body>
 </html>
+
+
+<!-- START OF ENQUIRY SECTION -->
+<!-- This container wraps the entire form and its heading to keep them grouped together -->
+<section class="enquiry-section">
+    
+    <!-- Section Heading & Subheading -->
+    <h2>Sponsor & Volunteer Enquiry Form</h2>
+    <p>Please fill out the form below, and our team will get back to you shortly.</p>
+
+    <!-- Main Form Element -->
+    <!-- The action="#" means it reloads the current page upon submission until a backend is connected -->
+    <form action="#" method="POST" class="enquiry-form">
+        
+        <!-- Input Group: Full Name -->
+        <div class="form-group">
+            <!-- The 'for' attribute matches the input 'id' for web accessibility -->
+            <label for="fullname">Full Name:</label>
+            <!-- 'required' forces the user to fill out this field before submitting -->
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+        </div>
+
+        <!-- Input Group: Email Address -->
+        <div class="form-group">
+            <label for="email">Email Address:</label>
+            <!-- 'type="email"' automatically validates that the user enters a proper email format (contains @) -->
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <!-- Input Group: Phone Number -->
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <!-- 'type="tel"' optimizes mobile keyboards for number entry; this field is optional (no 'required' tag) -->
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+        </div>
+
+        <!-- Dropdown Group: Enquiry Type Selector -->
+        <div class="form-group">
+            <label for="enquiry-type">I want to join as a:</label>
+            <select id="enquiry-type" name="enquiry_type" required>
+                <!-- The first option acts as a placeholder text and cannot be selected after opening the dropdown -->
+                <option value="" disabled selected>Select an option</option>
+                <!-- These options allow the user to choose their specific role -->
+                <option value="sponsor">Sponsor (Financial / Material Support)</option>
+                <option value="volunteer">Volunteer (Time / Skills Support)</option>
+            </select>
+        </div>
+
+        <!-- Textarea Group: Message / Proposal Box -->
+        <div class="form-group">
+            <label for="message">How would you like to assist Sephapose?</label>
+            <!-- 'rows="5"' sets the initial vertical size of the text box -->
+            <textarea id="message" name="message" rows="5" placeholder="Tell us more about your sponsorship proposal or how you want to volunteer..." required></textarea>
+        </div>
+
+        <!-- Form Submission Action -->
+        <!-- 'type="submit"' triggers the form submission process when clicked -->
+        <button type="submit" class="submit-btn">Submit Enquiry</button>
+        
+    </form>
+</section>
+<!-- END OF ENQUIRY SECTION -->
+
