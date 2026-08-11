@@ -38,58 +38,39 @@ Primary Web Goals1
 * 4-Pillar Operational Grid: Program descriptions mapping out Elderly Residential Care, Early Childhood Development (ECD) Daycare, The Women's Sewing Club, and Youth Literacy / Sports Hubs.
 * Desired Functionality: A script-driven filter system that lets users sort and isolate services based on target demographic (Seniors, Children, Volunteers).
 
-## 4. Infrastructure & Projects (projects.html)
 
-* Key Features:
-* 2D Spatial Zoning Charts: Clean blueprints illustrating clear segregation of space between elderly residential blocks and active daycare spaces.
-   * 3D Architectural Walkthrough Descriptions: Text prompts detailing the future state of the facility (Borehole station, secure clinic, sleeping units).
-* Desired Functionality: Click-to-enlarge structural blueprints utilizing modal text popups to keep layout rendering speeds fast on slow network areas.
 
-## 5. Funder Submission Portal (portal.html)
+## 3. enquiry
 
 * Key Features:
 * Compliance Document Vault: Secure links enabling corporate social responsibility officers to download necessary verification files.
    * Funder Submission Form: A portal allowing donors to register grant applications or submit compliance request reviews.
 * Desired Functionality: JavaScript validation layers that cross-verify document criteria before processing form fields, securely routing user uploads.
 
-## 6. Contact & Location (contact.html)
-1. Homepage (index.html)
+## 4. Contact & Location (contact.html)
 
-* Key Features:
-* Hero Section: High-impact call-to-action banner detailing the NPO’s core mission statement in Ga-Mothapo.
-   * NPO Verification Badge: High-visibility banner highlighting active registration status (NPO Reg: 098-244).
-   * Urgent Needs Ticker: A layout banner cycling through active infrastructure deficits (e.g., Borehole Station Repairs, Secure Perimeter Fencing).
-* Desired Functionality: Dual landing-gate buttons ("Enter Funder Portal" and "Get Involved Locally") that dynamically route traffic to specific sub-pages based on user intent.
+## sitemap
 
+                        ┌──────────────────────────────┐
+                        │          index.html          │
+                        │      (Main Homepage Hub)     │
+                        └──────────────┬───────────────┘
+                                       │
+         ┌───────────────┬─────────────┴─────────────┬───────────────┐
+         ▼               ▼                           ▼               ▼
+┌────────────────┐┌──────────────┐           ┌──────────────┐┌────────────────┐
+│   about.html   ││ services.html│           ││   enquire.html  │
+│ (Our History & ││ (4 Care Care │           │ ││ (Secure Funder│
+│   NPO Data)    ││                                       Certificates) │
+└────────┬───────┘└──────┬───────┘           └──────┬───────┘└────────┬───────┘
+         │               │                          │                 │
+         └───────────────┴─────────────┬────────────┴─────────────────┘
+                                       ▼
+                        ┌──────────────────────────────┐
+                        │         contact.html         │
+                        │    (Map, Forms, Support)     │
+                        └──────────────────────────────┘
 
-## 2. About Us (about.html)
-
-* Key Features:
-* Historical Timeline: A structured layout tracking the centre's progression from a community day facility to a dual-care hub.
-   * Corporate Milestone Showcase: A dedicated space highlighting past corporate social investments, specifically the [Hollywoodbets Foundation](https://hollywoodfoundation.co.za/category/sephaphoshe-old-age-centre/) partnership.
-* Desired Functionality: Responsive expandable content tabs that let readers view specific legacy milestones without cluttering the page.
-
-## 3. Services Layout (services.html)
-
-* Key Features:
-* 4-Pillar Operational Grid: Program descriptions mapping out Elderly Residential Care, Early Childhood Development (ECD) Daycare, The Women's Sewing Club, and Youth Literacy / Sports Hubs.
-* Desired Functionality: A script-driven filter system that lets users sort and isolate services based on target demographic (Seniors, Children, Volunteers).
-
-
-
-## 5. Enquiry
-
-* Key Features:
-* Compliance Document Vault: Secure links enabling corporate social responsibility officers to download necessary verification files.
-   * Funder Submission Form: A portal allowing donors to register grant applications or submit compliance request reviews.
-* Desired Functionality: JavaScript validation layers that cross-verify document criteria before processing form fields, securely routing user uploads.
-
-## 6. Contact & Location (contact.html)
-
-* Key Features:
-* Communication Registry Form: Dedicated fields for general inquiries, corporate meeting bookings, and physical supply donations (such as fabric or food).
-   * Management Hotlines: Direct contact strings for center coordinators Mapula Violet Letsoalo and Mothap Theresa (060 936 8577 / 076 356 2305).
-* Desired Functionality: Interactive geolocation map implementation targeting Stand 1135, Sephaphose Village, Ga-Mothapo. It pairs with click-to-call scripts to launch mobile phones or open standard web communication channels instantly.
 
 
 
