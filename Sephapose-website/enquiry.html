@@ -1,98 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
 <head>
-       
+
+    <!-- Sets the character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the website work on different screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title shown on the browser tab -->
+    <title>Enquiry | Sephapose Old Age Care Centre</title>
+     <link rel="icon" href="images/Sephapose logo.png">
 </head>
+
+
 <body>
 
-    <nav>
-        <a href="index.html">Home</a> | 
-        <a href="about.html">About Us</a> | 
-        <a href="services.html">Services</a> | 
-        <a href="enquiry.html">Enquiry</a> | 
-        <a href="contact.html">Contact Us</a>
-    </nav>
+
+    <!-- ================================================= -->
+    <!-- MAIN WEBSITE TABLE -->
+    <!-- The table creates the left navigation and right content -->
+    <!-- ================================================= -->
+
+    <table width="100%" cellpadding="20">
+
+        <tr>
+
+
+            <!-- ================================================= -->
+            <!-- LEFT SIDE - LOGO AND NAVIGATION -->
+            <!-- ================================================= -->
+
+            <td width="20%" valign="top">
+
+                <!-- Organisation name -->
+                <h2>SEPHAPOSE</h2>
+
+
+                <!-- Sephapose Logo -->
+                <!-- Make sure your logo is named logo.png -->
+                <img
+                    src="images/Sephapose logo.png"
+                    alt="Sephapose Old Age Care Centre Logo"
+                    width="130"
+                >
+
+
+                <br>
+                <br>
+
+                <hr>
+
+
+                <!-- Navigation menu -->
+
+                <nav>
+
+                    <!-- Home -->
+                    <p>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </p>
+
+
+                    <!-- About Us -->
+                    <p>
+                        <a href="about.html">
+                            About Us
+                        </a>
+                    </p>
+
+
+                    <!-- Services -->
+                    <p>
+                        <a href="services.html">
+                            Services
+                        </a>
+                    </p>
+
+
+                    <!-- Enquiry -->
+                    <p>
+                        <a href="enquiry.html">
+                            Enquiry
+                        </a>
+                    </p>
+
+
+                    <!-- Contact Us -->
+                    <p>
+                        <a href="contact.html">
+                            Contact Us
+                        </a>
+                    </p>
+
+                </nav>
+
+            </td>
+
+
+
+            <!-- ================================================= -->
+            <!-- RIGHT SIDE - ENQUIRY PAGE -->
+            <!-- ================================================= -->
+
+            <td width="80%" valign="top">
+
+
+                <!-- Page heading -->
+
+                <header>
+
+                    <h1>
+                        Sponsor &amp; Volunteer Enquiry
+                    </h1>
+
+                    <p>
+                        We'd love to hear from you and work together.
+                    </p>
+
+                </header>
+
+
+                <br>
+                <br>
+
+
+                <!-- ================================================= -->
+                <!-- ENQUIRY FORM -->
+                <!-- ================================================= -->
+
+                <main>
+
+                    <section>
+
+                        <!-- Fieldset creates a box around the form -->
+
+                        <fieldset>
+
+                            <!-- Form title -->
+
+                            <legend>
+                                <strong>Enquiry Form</strong>
+                            </legend>
+
+
+                            <br>
+
+
+                            <!-- ================================================= -->
+                            <!-- FULL NAME -->
+                            <!-- ================================================= -->
+
+                            <label for="name">
+
+                                <strong>
+                                    Full Name:
+                                </strong>
+
+                            </label>
+
+
+                            <br>
+
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your full name"
+                                size="60"
+                                required
+                            >
+
+
+                            <br>
+                            <br>
+                            <br>
+
+
+
+                            <!-- ================================================= -->
+                            <!-- EMAIL ADDRESS -->
+                            <!-- ================================================= -->
+
+                            <label for="email">
+
+                                <strong>
+                                    Email Address:
+                                </strong>
+
+                            </label>
+
+
+                            <br>
+
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                size="60"
+                                required
+                            >
+
+
+                            <br>
+                            <br>
+                            <br>
+
+
+
+                            <!-- ================================================= -->
+                            <!-- PHONE NUMBER -->
+                            <!-- ================================================= -->
+
+                            <label for="phone">
+
+                                <strong>
+                                    Phone Number:
+                                </strong>
+
+                            </label>
+
+
+                            <br>
+
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="Enter your phone number"
+                                size="60"
+                                required
+                            >
+
+
+                            <br>
+                            <br>
+                            <br>
+
+
+
+                            <!-- ================================================= -->
+                            <!-- SPONSOR OR VOLUNTEER -->
+                            <!-- ================================================= -->
+
+                            <label for="role">
+
+                                <strong>
+                                    I want to join as:
+                                </strong>
+
+                            </label>
+
+
+                            <br>
+
+
+                            <select
+                                id="role"
+                                name="role"
+                                required
+                            >
+
+                                <option value="">
+                                    Select an option
+                                </option>
+
+                                <option value="sponsor">
+                                    Sponsor
+                                </option>
+
+                                <option value="volunteer">
+                                    Volunteer
+                                </option>
+
+                                <option value="both">
+                                    Sponsor &amp; Volunteer
+                                </option>
+
+                                <option value="other">
+                                    Other
+                                </option>
+
+                            </select>
+
+
+                            <br>
+                            <br>
+                            <br>
+
+
+
+                            <!-- ================================================= -->
+                            <!-- MESSAGE -->
+                            <!-- ================================================= -->
+
+                            <label for="message">
+
+                                <strong>
+                                    How would you like to assist Sephapose?
+                                </strong>
+
+                            </label>
+
+
+                            <br>
+                            <br>
+
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="10"
+                                cols="70"
+                                placeholder="Tell us more about your sponsorship proposal or how you would like to volunteer..."
+                                required
+                            ></textarea>
+
+
+                            <br>
+                            <br>
+                            <br>
+
+
+
+                            <!-- ================================================= -->
+                            <!-- SUBMIT BUTTON -->
+                            <!-- ================================================= -->
+
+                            <button type="submit">
+
+                                Submit Enquiry
+
+                            </button>
+
+
+                            <br>
+                            <br>
+
+                        </fieldset>
+
+                    </section>
+
+                </main>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+
+
+    <!-- ================================================= -->
+    <!-- FOOTER -->
+    <!-- ================================================= -->
+
+    <br>
+    <br>
+
     <hr>
 
-    
-
-</body>
-</html>
-
-
-<!-- START OF ENQUIRY SECTION -->
-<!-- This container wraps the entire form and its heading to keep them grouped together -->
-<section class="enquiry-section">
-    
-    <!-- Section Heading & Subheading -->
-    <h2>Sponsor & Volunteer Enquiry Form</h2>
-    <p>Please fill out the form below, and our team will get back to you shortly.</p>
-
-    <!-- Main Form Element -->
-    <!-- The action="#" means it reloads the current page upon submission until a backend is connected -->
-    <form action="#" method="POST" class="enquiry-form">
-        
-        <!-- Input Group: Full Name -->
-        <div class="form-group">
-            <!-- The 'for' attribute matches the input 'id' for web accessibility -->
-            <label for="fullname">Full Name:</label>
-            <!-- 'required' forces the user to fill out this field before submitting -->
-            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
-        </div>
-
-        <!-- Input Group: Email Address -->
-        <div class="form-group">
-            <label for="email">Email Address:</label>
-            <!-- 'type="email"' automatically validates that the user enters a proper email format (contains @) -->
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-        </div>
-
-        <!-- Input Group: Phone Number -->
-        <div class="form-group">
-            <label for="phone">Phone Number:</label>
-            <!-- 'type="tel"' optimizes mobile keyboards for number entry; this field is optional (no 'required' tag) -->
-            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
-        </div>
-
-        <!-- Dropdown Group: Enquiry Type Selector -->
-        <div class="form-group">
-            <label for="enquiry-type">I want to join as a:</label>
-            <select id="enquiry-type" name="enquiry_type" required>
-                <!-- The first option acts as a placeholder text and cannot be selected after opening the dropdown -->
-                <option value="" disabled selected>Select an option</option>
-                <!-- These options allow the user to choose their specific role -->
-                <option value="sponsor">Sponsor (Financial / Material Support)</option>
-                <option value="volunteer">Volunteer (Time / Skills Support)</option>
-            </select>
-        </div>
-
-        <!-- Textarea Group: Message / Proposal Box -->
-        <div class="form-group">
-            <label for="message">How would you like to assist Sephapose?</label>
-            <!-- 'rows="5"' sets the initial vertical size of the text box -->
-            <textarea id="message" name="message" rows="5" placeholder="Tell us more about your sponsorship proposal or how you want to volunteer..." required></textarea>
-        </div>
-
-        <!-- Form Submission Action -->
-        <!-- 'type="submit"' triggers the form submission process when clicked -->
-        <button type="submit" class="submit-btn">Submit Enquiry</button>
-         <!-- ================= FOOTER ================= -->
 
     <footer>
 
-        <h3>SEPHAPOSE OLD AGE CARE CENTRE</h3>
+        <!-- Organisation name -->
+
+        <h2>
+            SEPHAPOSE OLD AGE CARE CENTRE
+        </h2>
+
+
+        <!-- Organisation slogan -->
 
         <p>
             Caring for our elderly. Building a better future.
         </p>
 
+
+        <!-- Copyright -->
+
         <p>
-            &copy; 2026 Sephapose Old Age Care Centre.
+            © 2026 Sephapose Old Age Care Centre.
             All rights reserved.
         </p>
 
     </footer>
-    </form>
-</section>
-<!-- END OF ENQUIRY SECTION -->
 
+
+</body>
+
+</html>
