@@ -1,4 +1,4 @@
-# WEB develpment
+
 # Sephaphoshe NPO Web Development Project
 HIINE MOKGADI PRUDENCE
 ST10517712
