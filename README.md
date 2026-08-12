@@ -82,7 +82,8 @@ c:\Users\PRUDENCE HIINE\Downloads\ChatGPT Image Aug 12, 2026, 08_14_53 AM.png
 -Milestone 3 (Week 3): Integrate JavaScript functionality, build the portal file repository, and run local cross-browser accessibility testing.
 -Milestone 4 (Week 4): Push final production build to live cloud hosting, execute performance optimization checks, and submit POE assignment.
 
-## Reference ListDepartment of Social Development, 2026. 
+## Reference List
+Department of Social Development, 2026. 
 
 -National Register of Non-Profit Organisations: Sephaphoshe Old Age & Day Care Centre (Reg No: 098-244). Pretoria: Department of Social Development.Hollywoodbets Foundation, 2024. 
 -Hollywoodbets Foundation empowers Sephaphoshe Old Age Centre in Limpopo. Available at: hollywoodfoundation.co.za [Accessed 11 August 2026].Limpopo Department of Social Development, 2026. Registered Service Centres for Older Persons: Capricorn District. Polokwane: Limpopo Provincial Government.
