@@ -49,30 +49,50 @@ Primary Web Goals1
 * Desired Functionality: JavaScript validation layers that cross-verify document criteria before processing form fields, securely routing user uploads.
 
 ## 4. Contact & Location (contact.html)
+# Website Site Map
 
-## sitemap
-c:\Users\PRUDENCE HIINE\Downloads\ChatGPT Image Aug 12, 2026, 08_14_53 AM.png
+```text
+                         ┌──────────────┐
+                         │     HOME     │
+                         └──────┬───────┘
+                                │
+             ┌──────────────────┼──────────────────┐
+             │                  │                  │
+             ▼                  ▼                  ▼
+      ┌─────────────┐   ┌─────────────┐   ┌─────────────┐
+      │  ABOUT US   │   │   SERVICES  │   │  CONTACT US │
+      └─────────────┘   └─────────────┘   └──────┬──────┘
+                                                  │
+                                                  ▼
+                                           ┌─────────────┐
+                                           │  ENQUIRY    │
+                                           │    FORM     │
+                                           └─────────────┘
+                               
+                         ┌─────────────┐
+                         │   GALLERY   │
+                         └─────────────┘
+```
 
-                        ┌──────────────────────────────┐
-                        │          index.html          │
-                        │      (Main Homepage Hub)     │
-                        └──────────────┬───────────────┘
-                                       │
-         ┌───────────────┬─────────────┴─────────────┬───────────────┐
-         ▼               ▼                           ▼               ▼
-┌────────────────┐┌──────────────┐           ┌──────────────┐┌────────────────┐
-│   about.html   ││ services.html│           ││   enquire.html  │
-│ (Our History & ││ (4 Care Care │           │ ││ (Secure Funder│
-│   NPO Data)    ││                                       Certificates) │
-└────────┬───────┘└──────┬───────┘           └──────┬───────┘└────────┬───────┘
-         │               │                          │                 │
-         └───────────────┴─────────────┬────────────┴─────────────────┘
-                                       ▼
-                        ┌──────────────────────────────┐
-                        │         contact.html         │
-                        │    (Map, Forms, Support)     │
-                        └──────────────────────────────┘
+## Website Pages
 
+* **Home** – Main landing page of the website.
+* **About Us** – Information about the organisation.
+* **Services** – Information about the services provided.
+* **Gallery** – Photos and images.
+* **Contact Us** – Contact information and ways to get in touch.
+* **Enquiry Form** – Form where visitors can submit questions or enquiries.
+
+## Navigation Structure
+
+```text
+Home
+├── About Us
+├── Services
+├── Gallery
+└── Contact Us
+    └── Enquiry Form
+```
 
 
 
