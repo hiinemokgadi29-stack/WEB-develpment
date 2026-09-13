@@ -6,12 +6,27 @@ ST10517712
 A 5-page semantic HTML website developed for the Sephaphoshe Old Age & Day Care Centre to attract corporate sponsors, water engineers, and community volunteers to assist with infrastructural rebuilding.
 
 ## Changelog
-### [Part 1 Submission] - 2026-07-30
+### [Part 1 Submission] - 2026-08-24
 - Created core repository folder structure with separate /css, /js, and /images subfolders.
 - Developed 5 required semantic web files: index.html, about.html, services.html, enquiry.html, and contact.html.
 - Implemented global navigation menu linking all 5 local files seamlessly.
 - Configured a blank external stylesheet layout (/css/style.css) and linked it across all pages.
 - Drafted the comprehensive Project Proposal document outlining target audiences, aesthetics, and infrastructural goals.
+## [Part 2 Submission] – 2026-09-18
+
+### CSS and Responsive Design
+- Updated the external `/css/style.css` stylesheet.
+- Applied consistent styling across all five HTML pages.
+- Improved typography, spacing, colours, backgrounds, borders, and shadows.
+- Styled navigation links and buttons with interactive hover, focus, and active states.
+- Added responsive image styling.
+- Added responsive layouts using CSS media queries.
+- Added desktop, tablet, and mobile breakpoints.
+- Used relative units such as `rem` and `%` for flexible sizing.
+- Improved the styling of tables and enquiry forms.
+- Improved the overall visual consistency and readability of the website.
+- Ensured all five HTML pages continue to use the external stylesheet.
+- Prepared the website for testing across different screen sizes.
 ## Website Goals and objectives 
 Primary Web Goals1
 - Secure Infrastructure FundingObjective: Attract corporate social investment (CSI) and government grants.Focus Areas: Raise capital for the borehole station, secure boundary fencing, separate sleeping quarters, and the daycare playground.
@@ -80,7 +95,23 @@ c:\Users\PRUDENCE HIINE\Downloads\ChatGPT Image Aug 12, 2026, 08_14_53 AM.png
 -Milestone 2 (Week 2): Develop semantic HTML5 structure for all 5 core pages and implement responsive CSS3 layouts.
 -Milestone 3 (Week 3): Integrate JavaScript functionality, build the portal file repository, and run local cross-browser accessibility testing.
 -Milestone 4 (Week 4): Push final production build to live cloud hosting, execute performance optimization checks, and submit POE assignment.
+## Part 2 – CSS and Responsive Web Design
 
+For Part 2, the website was enhanced using an external CSS stylesheet to improve the overall appearance, layout, readability, and responsiveness of all five pages.
+
+### CSS Implementation
+- Added and applied an external `css/style.css` stylesheet.
+- Styled the header, navigation bar, main content, sections, tables, forms, buttons, images, and footer.
+- Applied consistent typography, spacing, borders, backgrounds, and visual effects throughout the website.
+- Added hover, focus, and active states to improve user interaction.
+- Used relative CSS units such as `rem` and `%` to support flexible layouts.
+- Added responsive images so images adjust to different screen sizes.
+- Added media queries for desktop, tablet, and mobile screen sizes.
+- Improved the layout so content remains readable and organised on smaller screens.
+- Maintained the existing five-page website structure and navigation.
+
+### Responsive Design
+The website was tested and adjusted for different screen sizes to ensure that the content, navigation, tables, images, and forms remain usable across desktop, tablet, and mobile devices.
 ## Reference ListDepartment of Social Development, 2026. 
 
 -National Register of Non-Profit Organisations: Sephaphoshe Old Age & Day Care Centre (Reg No: 098-244). Pretoria: Department of Social Development.Hollywoodbets Foundation, 2024. 
