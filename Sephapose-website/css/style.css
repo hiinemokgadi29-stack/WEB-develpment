@@ -972,10 +972,3 @@ select:focus-visible {
         transition: none !important;
     }
 }
-/* CURRENT PAGE */
-nav a.active {
-    background: var(--gold-light);
-    color: var(--green-dark);
-    border-color: var(--gold);
-    font-weight: 700;
-}
