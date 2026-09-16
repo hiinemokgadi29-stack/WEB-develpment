@@ -126,3 +126,99 @@ In-Text Citation Quick Reference
 For history/NPO -registration: ...as stated by the Department of Social Development (2026).
 For corporate funding: ...infrastructure support was provided by the Hollywoodbets Foundation (2024).
 -For code/design standards: ...adhering directly to global accessibility metrics (World Wide Web Consortium, 2023).
+## Part 2 Submission – CSS and Responsive Web Design
+
+### 2026-09-18
+
+Part 2 focused on improving the visual presentation, usability, accessibility, and responsiveness of the Sephaphoshe Old Age & Day Care Centre website.
+
+### CSS Implementation
+
+* Updated the external `/css/style.css` stylesheet.
+* Applied consistent styling across all five HTML pages.
+* Improved typography, spacing, colours, backgrounds, borders, and shadows.
+* Styled headings, paragraphs, sections, tables, forms, buttons, images, and the footer.
+* Added interactive pseudo-classes including `:hover`, `:focus`, `:active`, `:visited`, and `:focus-visible`.
+* Used relative and flexible CSS units such as `rem`, `%`, `vw`, and `clamp()`.
+* Added responsive image styling using flexible widths and `height: auto`.
+* Improved the readability and visual consistency of the website.
+
+### Responsive Design
+
+CSS media queries were added to make the website responsive across different screen sizes.
+
+The stylesheet includes responsive breakpoints for:
+
+* Desktop screens
+* Tablet screens
+* Mobile phones
+* Small mobile phones
+* Very small phone screens
+
+The layout was adjusted so that the desktop two-column structure changes into a vertical layout on smaller screens. This allows the navigation/sidebar and main content to display correctly without causing horizontal scrolling.
+
+### Responsive Navigation
+
+The navigation menu was adjusted for smaller screens.
+
+On desktop screens, the navigation uses a flexible layout. On mobile screens, the navigation changes to a two-column grid with adjusted spacing, font sizes, and link widths.
+
+This ensures that navigation links remain readable and accessible on smaller devices.
+
+### Responsive Typography
+
+Typography was adjusted at different screen sizes to maintain readability.
+
+Font sizes and line heights were reduced appropriately for tablets and mobile devices. Heading sizes were also adjusted using responsive CSS techniques such as `clamp()` and media queries.
+
+### Responsive Images
+
+Images were made responsive using:
+
+* `max-width: 100%`
+* `width: 100%`
+* `height: auto`
+
+The logo and content images were also given different sizes at smaller breakpoints to prevent images from overflowing the screen.
+
+### Forms and Tables
+
+The enquiry forms were adjusted to fit smaller screens. Input fields, text areas, select boxes, and buttons use flexible widths.
+
+Tables were also adjusted using responsive widths, smaller padding, and text wrapping to improve their usability on mobile devices.
+
+### Accessibility and User Interaction
+
+Interactive states were added to links, buttons, and form controls using CSS pseudo-classes. These provide visual feedback when users hover over, focus on, visit, or activate interactive elements.
+
+Focus-visible styling was also included to improve keyboard accessibility.
+
+### Testing
+
+The website was tested and adjusted across different screen sizes to check:
+
+* Navigation
+* Page layout
+* Typography
+* Images
+* Forms
+* Tables
+* Google Maps
+* Buttons
+* Horizontal overflow
+* Overall readability
+
+The purpose of the responsive testing was to ensure that all five pages remain usable and visually consistent across desktop, tablet, and mobile devices.
+
+### Part 2 References
+
+The CSS and responsive design implementation was informed by web development and accessibility documentation, including MDN Web Docs and the Web Content Accessibility Guidelines (WCAG) 2.2.
+
+Relevant references include:
+
+* MDN Web Docs – CSS Media Queries
+* MDN Web Docs – CSS Pseudo-classes
+* MDN Web Docs – Responsive Web Design
+* MDN Web Docs – Responsive Images
+* MDN Web Docs – CSS `clamp()`
+* World Wide Web Consortium (W3C) – Web Content Accessibility Guidelines (WCAG) 2.2
