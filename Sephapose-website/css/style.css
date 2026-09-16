@@ -1,12 +1,15 @@
 /* =========================================================
    SEPHAPOSE OLD AGE CARE CENTRE
    WEDE5020 - PART 2
-   RESPONSIVE CSS
+   RESPONSIVE CSS STYLESHEET
    ========================================================= */
 
 
 /* =========================================================
    1. COLOUR VARIABLES
+   =========================================================
+   These variables keep the colour scheme consistent
+   throughout the website.
    ========================================================= */
 
 :root {
@@ -22,19 +25,21 @@
 
     --text: #26332c;
     --muted: #65736a;
-
     --border: #d9e2dc;
 
     --shadow: 0 0.5rem 1.5rem rgba(18, 61, 40, 0.10);
-
     --radius: 0.75rem;
 
+    /* Maximum content width for large screens */
     --max-width: 76rem;
 }
 
 
 /* =========================================================
-   2. BASIC RESET
+   2. GLOBAL RESET
+   =========================================================
+   Removes default browser spacing and makes sizing easier
+   to control across different devices.
    ========================================================= */
 
 * {
@@ -45,18 +50,22 @@
 
 
 /* =========================================================
-   3. HTML
+   3. HTML SETTINGS
    ========================================================= */
 
 html {
     width: 100%;
     overflow-x: hidden;
+
+    /* Smooth scrolling for better navigation */
     scroll-behavior: smooth;
 }
 
 
 /* =========================================================
    4. BODY
+   =========================================================
+   Main typography and background styling.
    ========================================================= */
 
 body {
@@ -64,21 +73,22 @@ body {
     min-height: 100vh;
 
     font-family: Arial, Helvetica, sans-serif;
-
-    background: var(--cream);
-
-    color: var(--text);
-
+    font-size: 1rem;
     line-height: 1.7;
 
-    font-size: 1rem;
+    background: var(--cream);
+    color: var(--text);
 
     overflow-x: hidden;
 }
 
 
 /* =========================================================
-   5. HEADINGS
+   5. TYPOGRAPHY
+   =========================================================
+   Responsive heading sizes are created using clamp().
+   This allows headings to change size depending on the
+   screen width.
    ========================================================= */
 
 h1,
@@ -86,27 +96,23 @@ h2,
 h3,
 h4 {
     color: var(--green-dark);
-
     line-height: 1.25;
-
     margin-bottom: 0.8rem;
 }
 
 
+/* Responsive typography using clamp() */
 h1 {
     font-size: clamp(1.7rem, 4vw, 2.7rem);
 }
-
 
 h2 {
     font-size: clamp(1.4rem, 3vw, 2rem);
 }
 
-
 h3 {
     font-size: 1.3rem;
 }
-
 
 p {
     margin-bottom: 1rem;
@@ -114,30 +120,36 @@ p {
 
 
 /* =========================================================
-   6. IMAGES
+   6. RESPONSIVE IMAGES
+   =========================================================
+   Images automatically shrink to fit the available space.
+   height:auto keeps the original image proportions.
    ========================================================= */
 
 img {
     max-width: 100%;
-
     height: auto;
-
     display: block;
 }
 
 
 /* =========================================================
-   7. LINKS
+   7. GENERAL LINKS
    ========================================================= */
 
 a {
     color: var(--green);
-
     text-decoration: none;
-
     font-weight: 600;
 }
 
+
+/* =========================================================
+   8. PSEUDO-CLASS: :visited
+   =========================================================
+   Controls the appearance of links that have already
+   been visited.
+   ========================================================= */
 
 a:visited {
     color: var(--green);
@@ -145,12 +157,11 @@ a:visited {
 
 
 /* =========================================================
-   8. STANDARD HOME PAGE HEADER
+   9. MAIN HEADER
    ========================================================= */
 
 body > header {
     width: 100%;
-
     background: var(--white);
 
     text-align: center;
@@ -163,53 +174,51 @@ body > header {
 }
 
 
-/* Logo */
+/* Header logo */
 
 body > header img {
     width: min(10rem, 40vw);
-
     margin: 0 auto 1rem;
 }
 
 
-/* Website title */
+/* Header title */
 
 body > header h1 {
     margin-bottom: 0.4rem;
-
     color: var(--green-dark);
 }
 
 
-/* Header paragraph */
+/* Header description */
 
 body > header p {
     color: var(--muted);
-
     max-width: 45rem;
-
     margin: 0 auto 1.2rem;
 }
 
 
 /* =========================================================
-   9. HOME PAGE NAVIGATION
+   10. DESKTOP NAVIGATION
+   =========================================================
+   Flexbox is used to keep navigation links organised
+   and centred on larger screens.
    ========================================================= */
 
 body > header nav {
     display: flex;
-
     flex-wrap: wrap;
 
     justify-content: center;
-
     align-items: center;
 
     gap: 0.5rem;
-
     margin-top: 1rem;
 }
 
+
+/* Navigation links */
 
 body > header nav a {
     display: inline-block;
@@ -217,11 +226,9 @@ body > header nav a {
     padding: 0.6rem 1rem;
 
     color: var(--green-dark);
-
     background: var(--white);
 
     border: 0.12rem solid transparent;
-
     border-radius: 0.4rem;
 
     transition:
@@ -230,9 +237,15 @@ body > header nav a {
 }
 
 
+/* =========================================================
+   11. PSEUDO-CLASS: :hover
+   =========================================================
+   Changes the navigation appearance when the mouse moves
+   over a link.
+   ========================================================= */
+
 body > header nav a:hover {
     color: var(--green-dark);
-
     background: var(--white);
 
     border-color: var(--gold);
@@ -241,64 +254,73 @@ body > header nav a:hover {
 }
 
 
+/* =========================================================
+   12. PSEUDO-CLASS: :focus
+   =========================================================
+   Gives keyboard users a visible focus indicator.
+   ========================================================= */
+
 body > header nav a:focus {
     color: var(--green-dark);
-
     background: var(--white);
 
     outline: 0.15rem solid var(--gold);
-
     outline-offset: 0.15rem;
 }
 
 
+/* =========================================================
+   13. PSEUDO-CLASS: :active
+   =========================================================
+   Shows a visual change while the link is being clicked.
+   ========================================================= */
+
 body > header nav a:active {
     color: var(--green-dark);
-
     background: var(--gold-light);
 }
 
 
 /* =========================================================
-   10. MAIN CONTENT
+   14. MAIN CONTENT
    ========================================================= */
 
 main {
     width: min(100% - 2rem, var(--max-width));
 
     margin: 2rem auto;
-
     padding: 0;
 }
 
 
 /* =========================================================
-   11. SECTIONS
+   15. SECTIONS
    ========================================================= */
 
 section {
     background: var(--white);
 
     padding: 1.5rem;
-
     margin-bottom: 1.5rem;
 
     border: 0.08rem solid var(--border);
-
     border-radius: var(--radius);
 
     box-shadow: var(--shadow);
 }
 
 
+/* Section heading */
+
 section h2 {
     border-bottom: 0.15rem solid var(--gold);
 
     padding-bottom: 0.6rem;
-
     margin-bottom: 1rem;
 }
 
+
+/* Section sub-heading */
 
 section h3 {
     color: var(--green);
@@ -306,24 +328,22 @@ section h3 {
 
 
 /* =========================================================
-   12. ARTICLES
+   16. ARTICLE
    ========================================================= */
 
 article {
     background: var(--white);
 
     padding: 1.5rem;
-
     margin-bottom: 1.5rem;
 
     border-radius: var(--radius);
-
     border: 0.08rem solid var(--border);
 }
 
 
 /* =========================================================
-   13. BLOCKQUOTES
+   17. BLOCKQUOTE
    ========================================================= */
 
 blockquote {
@@ -332,7 +352,6 @@ blockquote {
     border-left: 0.3rem solid var(--gold);
 
     padding: 1rem 1.25rem;
-
     margin: 1rem 0;
 
     border-radius: 0.4rem;
@@ -340,14 +359,13 @@ blockquote {
 
 
 /* =========================================================
-   14. BUTTONS
+   18. BUTTONS
    ========================================================= */
 
 button,
 input[type="submit"],
 input[type="button"] {
     background: var(--green);
-
     color: var(--white);
 
     border: 0.12rem solid var(--green);
@@ -357,7 +375,6 @@ input[type="button"] {
     border-radius: 0.4rem;
 
     font-size: 1rem;
-
     font-weight: 700;
 
     cursor: pointer;
@@ -368,11 +385,14 @@ input[type="button"] {
 }
 
 
+/* =========================================================
+   19. PSEUDO-CLASS: BUTTON :hover
+   ========================================================= */
+
 button:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover {
     background: var(--green);
-
     color: var(--white);
 
     border-color: var(--gold);
@@ -381,45 +401,42 @@ input[type="button"]:hover {
 }
 
 
+/* =========================================================
+   20. PSEUDO-CLASS: BUTTON :focus
+   ========================================================= */
+
 button:focus,
 input[type="submit"]:focus,
 input[type="button"]:focus {
     outline: 0.15rem solid var(--gold);
-
     outline-offset: 0.15rem;
 }
 
+
+/* =========================================================
+   21. PSEUDO-CLASS: BUTTON :active
+   ========================================================= */
 
 button:active,
 input[type="submit"]:active,
 input[type="button"]:active {
     background: var(--green-dark);
-
     color: var(--white);
 }
 
 
 /* =========================================================
-   15. ABOUT / ENQUIRY TABLE PAGE LAYOUT
+   22. TWO-COLUMN TABLE LAYOUT
+   =========================================================
+   The existing table structure is used to create the
+   desktop sidebar + main content layout.
    ========================================================= */
-
-/*
-   Your About Us and Enquiry pages use a table
-   for the main page layout.
-
-   Desktop:
-   LEFT  = navigation
-   RIGHT = content
-*/
-
 
 body > table {
     width: 100%;
-
     max-width: 100%;
 
     border-collapse: separate;
-
     border-spacing: 0;
 
     background: var(--cream);
@@ -427,12 +444,11 @@ body > table {
 
 
 /* =========================================================
-   16. LEFT SIDEBAR
+   23. SIDEBAR
    ========================================================= */
 
 body > table > tbody > tr > td:first-child {
     width: 20%;
-
     min-width: 12rem;
 
     padding: 2rem 1.2rem;
@@ -440,14 +456,13 @@ body > table > tbody > tr > td:first-child {
     vertical-align: top;
 
     background: var(--green-dark);
-
     color: var(--white);
 
     border-right: 0.3rem solid var(--gold);
 }
 
 
-/* Sidebar title */
+/* Sidebar heading */
 
 body > table > tbody > tr > td:first-child h2 {
     color: var(--white);
@@ -471,7 +486,7 @@ body > table > tbody > tr > td:first-child img {
 }
 
 
-/* Sidebar horizontal lines */
+/* Sidebar horizontal rule */
 
 body > table > tbody > tr > td:first-child hr {
     border-top-color: rgba(255, 255, 255, 0.3);
@@ -492,7 +507,7 @@ body > table > tbody > tr > td:first-child nav p {
 }
 
 
-/* Sidebar links */
+/* Sidebar navigation links */
 
 body > table > tbody > tr > td:first-child nav a {
     display: block;
@@ -516,10 +531,18 @@ body > table > tbody > tr > td:first-child nav a {
 }
 
 
+/* =========================================================
+   24. SIDEBAR :visited
+   ========================================================= */
+
 body > table > tbody > tr > td:first-child nav a:visited {
     color: var(--white);
 }
 
+
+/* =========================================================
+   25. SIDEBAR :hover
+   ========================================================= */
 
 body > table > tbody > tr > td:first-child nav a:hover {
     color: var(--white);
@@ -532,14 +555,21 @@ body > table > tbody > tr > td:first-child nav a:hover {
 }
 
 
+/* =========================================================
+   26. SIDEBAR :focus
+   ========================================================= */
+
 body > table > tbody > tr > td:first-child nav a:focus {
     color: var(--white);
 
     outline: 0.15rem solid var(--gold);
-
     outline-offset: 0.1rem;
 }
 
+
+/* =========================================================
+   27. SIDEBAR :active
+   ========================================================= */
 
 body > table > tbody > tr > td:first-child nav a:active {
     color: var(--white);
@@ -556,7 +586,7 @@ body > table > tbody > tr > td:first-child p {
 
 
 /* =========================================================
-   17. RIGHT CONTENT COLUMN
+   28. MAIN CONTENT COLUMN
    ========================================================= */
 
 body > table > tbody > tr > td:nth-child(2) {
@@ -572,9 +602,7 @@ body > table > tbody > tr > td:nth-child(2) {
 }
 
 
-/* =========================================================
-   18. ABOUT / ENQUIRY PAGE HEADER
-   ========================================================= */
+/* Main content header */
 
 body > table > tbody > tr > td:nth-child(2) header {
     background: transparent;
@@ -596,18 +624,16 @@ body > table > tbody > tr > td:nth-child(2) header h1 {
 
 body > table > tbody > tr > td:nth-child(2) header p {
     color: var(--muted);
-
     margin-bottom: 0;
 }
 
 
 /* =========================================================
-   19. TABLES INSIDE CONTENT
+   29. TABLES
    ========================================================= */
 
 body > table table {
     width: 100%;
-
     max-width: 100%;
 
     border-collapse: collapse;
@@ -622,7 +648,6 @@ body > table table {
 
 body > table table th {
     background: var(--green-dark);
-
     color: var(--white);
 
     padding: 0.8rem;
@@ -646,9 +671,7 @@ body > table table td {
 }
 
 
-/* =========================================================
-   20. GENERAL TABLES
-   ========================================================= */
+/* Other tables */
 
 table:not(body > table) {
     width: 100%;
@@ -663,7 +686,6 @@ table:not(body > table) {
 
 th {
     background: var(--green-dark);
-
     color: var(--white);
 
     padding: 0.8rem;
@@ -682,11 +704,12 @@ td {
 
 
 /* =========================================================
-   21. FORMS
+   30. FORMS
    ========================================================= */
 
 form {
     width: 100%;
+    max-width: 55rem;
 
     background: var(--white);
 
@@ -698,15 +721,14 @@ form {
 
     box-shadow: var(--shadow);
 
-    max-width: 55rem;
-
     margin: 1.5rem auto;
 }
 
 
+/* Fieldset */
+
 fieldset {
     width: 100%;
-
     max-width: 100%;
 
     border: 0.08rem solid var(--border);
@@ -719,6 +741,8 @@ fieldset {
 }
 
 
+/* Legend */
+
 legend {
     color: var(--green-dark);
 
@@ -727,6 +751,8 @@ legend {
     padding: 0 0.5rem;
 }
 
+
+/* Labels */
 
 label {
     display: block;
@@ -740,14 +766,13 @@ label {
 
 
 /* =========================================================
-   22. FORM INPUTS
+   31. FORM INPUTS
    ========================================================= */
 
 input,
 textarea,
 select {
     width: 100%;
-
     max-width: 100%;
 
     padding: 0.75rem;
@@ -755,7 +780,6 @@ select {
     margin-bottom: 1rem;
 
     font-family: inherit;
-
     font-size: 1rem;
 
     color: var(--text);
@@ -768,13 +792,6 @@ select {
 }
 
 
-/*
-   These override the old HTML attributes:
-   size="60"
-   cols="70"
-*/
-
-
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -784,12 +801,20 @@ select {
 }
 
 
+/* Textarea */
+
 textarea {
     min-height: 8rem;
 
     resize: vertical;
 }
 
+
+/* =========================================================
+   32. FORM :focus PSEUDO-CLASS
+   =========================================================
+   Highlights form controls when the user selects them.
+   ========================================================= */
 
 input:focus,
 textarea:focus,
@@ -801,7 +826,7 @@ select:focus {
 
 
 /* =========================================================
-   23. IMAGES INSIDE MAIN CONTENT
+   33. RESPONSIVE MAIN IMAGES
    ========================================================= */
 
 main img {
@@ -815,8 +840,6 @@ main img {
 }
 
 
-/* Images inside About page */
-
 body > table > tbody > tr > td:nth-child(2) img {
     max-width: 100%;
 
@@ -825,18 +848,16 @@ body > table > tbody > tr > td:nth-child(2) img {
 
 
 /* =========================================================
-   24. GOOGLE MAP
+   34. RESPONSIVE IFRAME / MAP
    ========================================================= */
 
 iframe {
     display: block;
 
     width: 100%;
-
     max-width: 100%;
 
     height: 25rem;
-
     min-height: 18rem;
 
     border: 0;
@@ -848,7 +869,7 @@ iframe {
 
 
 /* =========================================================
-   25. HORIZONTAL RULE
+   35. HORIZONTAL RULE
    ========================================================= */
 
 hr {
@@ -860,15 +881,13 @@ hr {
 }
 
 
-/* Sidebar HR */
-
 body > table > tbody > tr > td:first-child hr {
     border-top-color: rgba(255, 255, 255, 0.3);
 }
 
 
 /* =========================================================
-   26. FOOTER
+   36. FOOTER
    ========================================================= */
 
 footer {
@@ -901,6 +920,8 @@ footer p {
 }
 
 
+/* Footer links */
+
 footer a {
     color: var(--white);
 
@@ -913,6 +934,8 @@ footer a:visited {
 }
 
 
+/* Footer :hover pseudo-class */
+
 footer a:hover {
     color: var(--white);
 
@@ -921,7 +944,7 @@ footer a:hover {
 
 
 /* =========================================================
-   27. CONTACT INFORMATION
+   37. CONTACT INFORMATION
    ========================================================= */
 
 .contact-info {
@@ -938,28 +961,36 @@ footer a:hover {
 
 
 /* =========================================================
-   28. TABLET
+   38. TABLET RESPONSIVE DESIGN
+   =========================================================
+   BREAKPOINT: max-width 60rem
+
+   This section demonstrates RESPONSIVE DESIGN for tablets.
+
+   Adjustments include:
+   - Smaller typography
+   - Smaller sidebar
+   - Smaller content area
+   - Smaller sections
+   - Responsive iframe
    ========================================================= */
 
 @media (max-width: 60rem) {
 
+    /* TYPOGRAPHY ADJUSTMENT */
     body {
         font-size: 0.95rem;
     }
 
 
-    /* Sidebar gets slightly smaller */
-
+    /* LAYOUT ADJUSTMENT */
     body > table > tbody > tr > td:first-child {
         width: 24%;
-
         min-width: 11rem;
 
         padding: 1.5rem 1rem;
     }
 
-
-    /* Content */
 
     body > table > tbody > tr > td:nth-child(2) {
         width: 76%;
@@ -968,27 +999,42 @@ footer a:hover {
     }
 
 
+    /* SECTION SIZE ADJUSTMENT */
+
     section {
         padding: 1.25rem;
     }
 
 
-    /* Map */
+    /* IFRAME / MAP ADJUSTMENT */
 
     iframe {
         width: 100%;
-
         height: 22rem;
     }
 }
 
 
 /* =========================================================
-   29. MOBILE
+   39. MOBILE RESPONSIVE DESIGN
+   =========================================================
+   BREAKPOINT: max-width 43rem
+
+   This section demonstrates MOBILE RESPONSIVE DESIGN.
+
+   Main changes:
+   - Desktop table layout becomes vertical
+   - Sidebar becomes full width
+   - Navigation becomes a 2-column grid
+   - Typography becomes smaller
+   - Images become full width
+   - Forms become full width
+   - Buttons become full width
    ========================================================= */
 
 @media (max-width: 43rem) {
 
+    /* MOBILE BODY */
     body {
         width: 100%;
 
@@ -999,14 +1045,17 @@ footer a:hover {
 
 
     /* =====================================================
-       
-       CHANGE TABLE LAYOUT INTO VERTICAL MOBILE LAYOUT
+       MOBILE LAYOUT ADJUSTMENT
+       =====================================================
+       The desktop table-based two-column layout changes
+       into a block/vertical layout on mobile.
        ===================================================== */
 
     body > table,
     body > table > tbody,
     body > table > tbody > tr,
     body > table > tbody > tr > td {
+
         display: block;
 
         width: 100% !important;
@@ -1016,10 +1065,11 @@ footer a:hover {
 
 
     /* =====================================================
-       MOBILE SIDEBAR BECOMES TOP AREA
+       MOBILE SIDEBAR
        ===================================================== */
 
     body > table > tbody > tr > td:first-child {
+
         width: 100%;
 
         min-width: 0;
@@ -1034,18 +1084,20 @@ footer a:hover {
     }
 
 
-    /* Mobile organisation name */
+    /* MOBILE SIDEBAR TYPOGRAPHY */
 
     body > table > tbody > tr > td:first-child h2 {
+
         font-size: 1.5rem;
 
         margin-bottom: 0.8rem;
     }
 
 
-    /* Mobile logo */
+    /* MOBILE LOGO SIZE */
 
     body > table > tbody > tr > td:first-child img {
+
         width: 6.5rem;
 
         max-width: 35vw;
@@ -1055,10 +1107,13 @@ footer a:hover {
 
 
     /* =====================================================
-       MOBILE NAVIGATION
+       MOBILE NAVIGATION ADJUSTMENT
+       =====================================================
+       Desktop navigation changes to a two-column grid.
        ===================================================== */
 
     body > table > tbody > tr > td:first-child nav {
+
         width: 100%;
 
         max-width: 32rem;
@@ -1073,18 +1128,18 @@ footer a:hover {
     }
 
 
-    /* Remove paragraph spacing */
-
     body > table > tbody > tr > td:first-child nav p {
+
         width: 100%;
 
         margin: 0;
     }
 
 
-    /* Navigation links */
+    /* MOBILE NAVIGATION LINKS */
 
     body > table > tbody > tr > td:first-child nav a {
+
         width: 100%;
 
         text-align: center;
@@ -1099,9 +1154,10 @@ footer a:hover {
     }
 
 
-    /* Sidebar slogan */
+    /* MOBILE SIDEBAR DESCRIPTION */
 
     body > table > tbody > tr > td:first-child > p {
+
         font-size: 0.85rem;
 
         margin-bottom: 0.5rem;
@@ -1109,10 +1165,11 @@ footer a:hover {
 
 
     /* =====================================================
-       MOBILE CONTENT COLUMN
+       MOBILE MAIN CONTENT
        ===================================================== */
 
     body > table > tbody > tr > td:nth-child(2) {
+
         width: 100%;
 
         padding: 1rem;
@@ -1121,16 +1178,22 @@ footer a:hover {
     }
 
 
-    /* Mobile page header */
+    /* =====================================================
+       MOBILE HEADER
+       ===================================================== */
 
     body > table > tbody > tr > td:nth-child(2) header {
+
         width: 100%;
 
         padding: 0.5rem 0 1rem;
     }
 
 
+    /* MOBILE TYPOGRAPHY ADJUSTMENT */
+
     body > table > tbody > tr > td:nth-child(2) header h1 {
+
         font-size: 1.7rem;
 
         line-height: 1.3;
@@ -1138,6 +1201,7 @@ footer a:hover {
 
 
     body > table > tbody > tr > td:nth-child(2) header p {
+
         font-size: 0.9rem;
 
         line-height: 1.5;
@@ -1149,6 +1213,7 @@ footer a:hover {
        ===================================================== */
 
     section {
+
         width: 100%;
 
         padding: 1rem;
@@ -1160,6 +1225,7 @@ footer a:hover {
 
 
     section h2 {
+
         font-size: 1.35rem;
 
         line-height: 1.3;
@@ -1167,11 +1233,15 @@ footer a:hover {
 
 
     section h3 {
+
         font-size: 1.15rem;
     }
 
 
+    /* MOBILE PARAGRAPH TYPOGRAPHY */
+
     p {
+
         font-size: 0.9rem;
 
         line-height: 1.65;
@@ -1179,10 +1249,11 @@ footer a:hover {
 
 
     /* =====================================================
-       MOBILE IMAGES
+       MOBILE IMAGE ADJUSTMENT
        ===================================================== */
 
     body > table > tbody > tr > td:nth-child(2) img {
+
         width: 100% !important;
 
         max-width: 100% !important;
@@ -1194,10 +1265,11 @@ footer a:hover {
 
 
     /* =====================================================
-       MOBILE GOOGLE MAP
+       MOBILE IFRAME / MAP
        ===================================================== */
 
     iframe {
+
         width: 100% !important;
 
         max-width: 100% !important;
@@ -1215,6 +1287,7 @@ footer a:hover {
        ===================================================== */
 
     body > table table {
+
         width: 100%;
 
         max-width: 100%;
@@ -1227,6 +1300,7 @@ footer a:hover {
 
     body > table table th,
     body > table table td {
+
         padding: 0.6rem;
 
         font-size: 0.8rem;
@@ -1242,6 +1316,7 @@ footer a:hover {
        ===================================================== */
 
     form {
+
         width: 100%;
 
         max-width: 100%;
@@ -1253,6 +1328,7 @@ footer a:hover {
 
 
     fieldset {
+
         width: 100%;
 
         padding: 1rem;
@@ -1260,13 +1336,19 @@ footer a:hover {
 
 
     legend {
+
         font-size: 1.05rem;
     }
 
 
+    /* =====================================================
+       MOBILE INPUTS
+       ===================================================== */
+
     input,
     textarea,
     select {
+
         width: 100% !important;
 
         max-width: 100% !important;
@@ -1278,13 +1360,19 @@ footer a:hover {
 
 
     textarea {
+
         min-height: 8rem;
     }
 
 
+    /* =====================================================
+       MOBILE BUTTONS
+       ===================================================== */
+
     button,
     input[type="submit"],
     input[type="button"] {
+
         width: 100%;
 
         min-height: 2.8rem;
@@ -1296,6 +1384,7 @@ footer a:hover {
        ===================================================== */
 
     footer {
+
         width: 100%;
 
         padding: 1.5rem 0.8rem;
@@ -1305,11 +1394,13 @@ footer a:hover {
 
 
     footer h2 {
+
         font-size: 1.25rem;
     }
 
 
     footer p {
+
         font-size: 0.8rem;
 
         line-height: 1.5;
@@ -1318,33 +1409,43 @@ footer a:hover {
 
 
 /* =========================================================
-   30. SMALL PHONE
+   40. SMALL MOBILE RESPONSIVE DESIGN
+   =========================================================
+   BREAKPOINT: max-width 30rem
+
+   Further adjustments are made for smaller smartphones.
    ========================================================= */
 
 @media (max-width: 30rem) {
 
+    /* SMALL MOBILE TYPOGRAPHY */
+
     body {
+
         font-size: 0.9rem;
 
         overflow-x: hidden;
     }
 
 
-    /* =====================================================
-       SMALL PHONE SIDEBAR
-       ===================================================== */
+    /* SMALL MOBILE SIDEBAR */
 
     body > table > tbody > tr > td:first-child {
+
         padding: 1rem 0.6rem;
     }
 
 
     body > table > tbody > tr > td:first-child h2 {
+
         font-size: 1.25rem;
     }
 
 
+    /* SMALL MOBILE LOGO */
+
     body > table > tbody > tr > td:first-child img {
+
         width: 5.5rem;
 
         max-width: 30vw;
@@ -1352,10 +1453,11 @@ footer a:hover {
 
 
     /* =====================================================
-       SMALL PHONE NAVIGATION
+       SMALL MOBILE NAVIGATION
        ===================================================== */
 
     body > table > tbody > tr > td:first-child nav {
+
         display: grid;
 
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1367,6 +1469,7 @@ footer a:hover {
 
 
     body > table > tbody > tr > td:first-child nav a {
+
         font-size: 0.78rem;
 
         padding: 0.55rem 0.2rem;
@@ -1375,18 +1478,20 @@ footer a:hover {
     }
 
 
-    /* =====================================================
-       SMALL PHONE CONTENT
-       ===================================================== */
+    /* SMALL MOBILE MAIN CONTENT */
 
     body > table > tbody > tr > td:nth-child(2) {
+
         width: 100%;
 
         padding: 0.7rem;
     }
 
 
+    /* SMALL MOBILE HEADER */
+
     body > table > tbody > tr > td:nth-child(2) header h1 {
+
         font-size: 1.4rem;
 
         line-height: 1.3;
@@ -1394,15 +1499,15 @@ footer a:hover {
 
 
     body > table > tbody > tr > td:nth-child(2) header p {
+
         font-size: 0.8rem;
     }
 
 
-    /* =====================================================
-       SMALL PHONE SECTIONS
-       ===================================================== */
+    /* SMALL MOBILE SECTIONS */
 
     section {
+
         padding: 0.8rem;
 
         margin-bottom: 0.8rem;
@@ -1410,16 +1515,21 @@ footer a:hover {
 
 
     section h2 {
+
         font-size: 1.15rem;
     }
 
 
     section h3 {
+
         font-size: 1rem;
     }
 
 
+    /* SMALL MOBILE PARAGRAPHS */
+
     p {
+
         font-size: 0.82rem;
 
         line-height: 1.6;
@@ -1427,10 +1537,11 @@ footer a:hover {
 
 
     /* =====================================================
-       SMALL PHONE TABLE
+       SMALL MOBILE TABLES
        ===================================================== */
 
     body > table table {
+
         table-layout: fixed;
 
         width: 100%;
@@ -1439,6 +1550,7 @@ footer a:hover {
 
     body > table table th,
     body > table table td {
+
         padding: 0.45rem;
 
         font-size: 0.72rem;
@@ -1450,10 +1562,11 @@ footer a:hover {
 
 
     /* =====================================================
-       SMALL PHONE FORM
+       SMALL MOBILE FORMS
        ===================================================== */
 
     form {
+
         padding: 0.8rem;
 
         margin: 0.8rem 0;
@@ -1461,23 +1574,31 @@ footer a:hover {
 
 
     fieldset {
+
         padding: 0.8rem;
     }
 
 
     legend {
+
         font-size: 0.95rem;
     }
 
 
     label {
+
         font-size: 0.85rem;
     }
 
 
+    /* =====================================================
+       SMALL MOBILE INPUTS
+       ===================================================== */
+
     input,
     textarea,
     select {
+
         font-size: 16px !important;
 
         padding: 0.65rem;
@@ -1485,13 +1606,19 @@ footer a:hover {
 
 
     textarea {
+
         min-height: 7rem;
     }
 
 
+    /* =====================================================
+       SMALL MOBILE BUTTONS
+       ===================================================== */
+
     button,
     input[type="submit"],
     input[type="button"] {
+
         width: 100%;
 
         padding: 0.7rem;
@@ -1501,10 +1628,11 @@ footer a:hover {
 
 
     /* =====================================================
-       SMALL PHONE MAP
+       SMALL MOBILE MAP
        ===================================================== */
 
     iframe {
+
         width: 100% !important;
 
         height: 15rem !important;
@@ -1513,51 +1641,68 @@ footer a:hover {
     }
 
 
-    /* =====================================================
-       SMALL PHONE FOOTER
-       ===================================================== */
+    /* SMALL MOBILE FOOTER */
 
     footer {
+
         padding: 1.2rem 0.6rem;
     }
 
 
     footer h2 {
+
         font-size: 1rem;
     }
 
 
     footer p {
+
         font-size: 0.72rem;
     }
 }
 
 
 /* =========================================================
-   31. VERY SMALL PHONES
+   41. VERY SMALL MOBILE RESPONSIVE DESIGN
+   =========================================================
+   BREAKPOINT: max-width 22rem
+
+   Final adjustments for very small phone screens.
    ========================================================= */
 
 @media (max-width: 22rem) {
 
+    /* VERY SMALL MOBILE NAVIGATION */
+
     body > table > tbody > tr > td:first-child nav a {
+
         font-size: 0.7rem;
 
         padding: 0.5rem 0.15rem;
     }
 
 
+    /* VERY SMALL MOBILE CONTENT */
+
     body > table > tbody > tr > td:nth-child(2) {
+
         padding: 0.5rem;
     }
 
 
+    /* VERY SMALL MOBILE SECTIONS */
+
     section {
+
         padding: 0.65rem;
     }
 
 
+    /* VERY SMALL MOBILE TABLES */
+
     body > table table th,
     body > table table td {
+
         font-size: 0.65rem;
 
         padding: 0.35rem;
@@ -1566,7 +1711,10 @@ footer a:hover {
 
 
 /* =========================================================
-   32. ACCESSIBILITY
+   42. :focus-visible PSEUDO-CLASS
+   =========================================================
+   Provides a clear focus indicator for keyboard users.
+   This improves accessibility.
    ========================================================= */
 
 a:focus-visible,
@@ -1574,6 +1722,7 @@ button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
+
     outline: 0.15rem solid var(--gold);
 
     outline-offset: 0.15rem;
@@ -1581,7 +1730,10 @@ select:focus-visible {
 
 
 /* =========================================================
-   33. REDUCED MOTION
+   43. ACCESSIBILITY - REDUCED MOTION
+   =========================================================
+   Users who prefer reduced motion will not receive
+   unnecessary animations or transitions.
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -1589,6 +1741,7 @@ select:focus-visible {
     *,
     *::before,
     *::after {
+
         scroll-behavior: auto !important;
 
         transition: none !important;
@@ -1597,10 +1750,14 @@ select:focus-visible {
 
 
 /* =========================================================
-   34. OPTIONAL NAVIGATION CLASSES
+   44. ADDITIONAL NAVIGATION CLASSES
+   =========================================================
+   These rules support navigation structures that use
+   .navbar, .nav-container and .nav-links.
    ========================================================= */
 
 .navbar {
+
     width: 100%;
 
     background-color: var(--white);
@@ -1612,6 +1769,7 @@ select:focus-visible {
 
 
 .nav-container {
+
     display: flex;
 
     flex-direction: column;
@@ -1625,6 +1783,7 @@ select:focus-visible {
 
 
 .nav-links {
+
     display: flex;
 
     flex-direction: row;
@@ -1644,6 +1803,7 @@ select:focus-visible {
 
 
 .nav-links a {
+
     text-decoration: none;
 
     color: var(--text);
@@ -1654,48 +1814,63 @@ select:focus-visible {
 }
 
 
+/* Navigation :visited pseudo-class */
+
 .nav-links a:visited {
+
     color: var(--text);
 }
 
 
+/* Active navigation link */
+
 .nav-links a.active {
+
     font-weight: bold;
 
     color: var(--green);
 }
 
 
-
-
 /* =========================================================
-   END OF STYLE.CSS
-   ========================================================= */
-/* =========================================================
-   35. REFERENCES
-   ========================================================= */
+   45. REFERENCES
+   =========================================================
+   Technical references used when developing the responsive
+   CSS and accessibility features.
 
-/*
-   Mozilla Developer Network (MDN).
-   CSS Media Queries:
+   MDN Web Docs:
+   CSS Media Queries
    https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Media_queries
 
-   Mozilla Developer Network (MDN).
-   Responsive Web Design:
+   MDN Web Docs:
+   Responsive Web Design
    https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
 
-   Mozilla Developer Network (MDN).
-   CSS Pseudo-classes:
+   MDN Web Docs:
+   CSS Pseudo-classes
    https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes
 
-   Mozilla Developer Network (MDN).
-   Responsive Images:
+   MDN Web Docs:
+   Responsive Images
    https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Responsive_images
 
-   Mozilla Developer Network (MDN).
-   CSS clamp() Function:
+   MDN Web Docs:
+   CSS clamp()
    https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/clamp
-*/
+
+   W3C:
+   Web Content Accessibility Guidelines (WCAG) 2.2
+   https://www.w3.org/TR/WCAG22/
+
+   These references informed the implementation of:
+   - Responsive media queries
+   - Flexible layouts
+   - Responsive images
+   - Responsive typography
+   - CSS pseudo-classes
+   - Keyboard focus states
+   - Accessibility improvements
+   ========================================================= */
 
 
 /* =========================================================
