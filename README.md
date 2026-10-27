@@ -1,4 +1,4 @@
-# Sephaphoshe NPO Web Development Project
+<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/ca88f546-a49d-4c8f-9cf2-376c6a493a48" /># Sephaphoshe NPO Web Development Project
 
 ## Student Information
 * **Student Name:** HIINE MOKGADI PRUDENCE
@@ -9,6 +9,7 @@
 ---
 
 ## Project Description
+
 A 5-page semantic HTML website developed for the **Sephaphoshe Old Age & Day Care Centre** to attract corporate sponsors, water engineers, and community volunteers to assist with infrastructural rebuilding efforts in Ga-Mothapo.
 
 ---
@@ -37,7 +38,7 @@ A 5-page semantic HTML website developed for the **Sephaphoshe Old Age & Day Car
 ### 2. About Us (`about.html`)
 * **Historical Timeline:** A structured layout tracking the center's progression from a community day facility to a comprehensive dual-care hub.
 * **Corporate Milestone Showcase:** A dedicated space highlighting past corporate social investments, specifically focusing on the milestone partnership with the **Hollywoodbets Foundation**.
-* **Desired Functionality:** Responsive expandable content tabs that let readers view specific legacy milestones cleanly without cluttering the page view.
+* **Functionality:** Responsive expandable JavaScript content tabs that let readers view specific legacy milestones cleanly without cluttering the page view.
 
 ### 3. Services Layout (`services.html`)
 * **4-Pillar Operational Grid:** Program descriptions mapping out:
@@ -45,16 +46,21 @@ A 5-page semantic HTML website developed for the **Sephaphoshe Old Age & Day Car
   * Early Childhood Development (ECD) Daycare
   * The Women's Sewing Club
   * Youth Literacy & Sports Hubs
-* **Desired Functionality:** A script-driven filter system that lets users sort and isolate services based on target demographic (*Seniors*, *Children*, *Volunteers*).
+* **Functionality:** A script-driven JavaScript filter system that lets users sort and isolate services based on target demographic (*Seniors*, *Children*, *Volunteers*).
 
 ### 4. Enquiry & Compliance Portal (`enquiry.html`)
 * **Compliance Document Vault:** Secure links enabling corporate social responsibility (CSR) officers to download necessary organizational verification files.
 * **Funder Submission Form:** A dedicated interface allowing corporate donors to register grant applications or submit compliance request reviews.
-* **Desired Functionality:** JavaScript validation layers that cross-verify document criteria before processing form fields and securely routing user uploads.
+* **Functionality:** Robust JavaScript client-side validation layers that cross-verify input data length and email patterns before processing. Submits asynchronously using AJAX to ensure a seamless interface experience without page reloads.
 
 ### 5. Contact & Location (`contact.html`)
 * **Contact Details:** Official communication lines, email channels, and physical operation addresses.
-* **Interactive Map Placement:** Clean integration showing the facility's location within Limpopo for volunteers and engineers.
+* **Interactive Map Placement:** Leaflet API mapping integration providing a functional, interactive location pointer showing the facility's location within Limpopo for volunteers and engineers.
+* **General Contact Form:** Built-in message field allowing open text input with strict live field validation and error message formatting.
+
+### 6. Interactive Gallery (`gallery.html`)
+* **Image Showcase:** Displays visual highlights of the Ga-Mothapo facility operations, community programs, and infrastructure challenges.
+* **Functionality:** Native JavaScript Lightbox implementation allowing images to expand smoothly into large overlay windows upon mouse clicks.
 
 ---
 
@@ -109,6 +115,12 @@ Home
 * **Typography & Visual Hierarchy:** Integrated clean typography scales, coordinated NPO color palettes, and styled accessible user navigation systems.
 * **Form & UI Component Styling:** Formatted input fields, compliance portal download buttons, and interactive layout elements for enhanced user experiences.
 
+### Part 3 Details
+* **Advanced JS Programming:** Programmed a modular script ecosystem (`/js/script.js`) handling custom UI patterns without third-party reliance.
+* **Interactive Mapping & Lightbox:** Built an interactive Map API component showing location coordinates alongside an adaptive modal gallery lightbox overlay.
+* **Form Validation & AJAX:** Engineered real-time client-side error notifications on inputs, character bounds handling, and custom AJAX `fetch` asynchronous submissions.
+* **SEO Engine Optimization:** Implemented meta keywords, page-specific structural headers, descriptive file conventions, a robust `robots.txt` configuration, and an XML indexing map schema.
+
 ---
 
 ## Changelog
@@ -127,6 +139,15 @@ Home
 * **Added:** Designed a responsive 4-pillar grid layout for the `services.html` page using CSS Grid.
 * **Styled:** Applied complete typographic styling, form field layouts, and interactive hover states for all functional buttons.
 
+### [Part 3 Submission] - 2026-10-27
+* **Added:** Integrated Leaflet JavaScript API to build an interactive map layout component inside `contact.html`.
+* **Added:** Developed a custom, native JavaScript image lightbox component for the responsive gallery.
+* **Added:** Coded custom interactive content tabs on `about.html` and a search filter toggle feature on `services.html`.
+* **Added:** Implemented extensive client-side form validation mechanisms with descriptive live error layouts for both `enquiry.html` and `contact.html`.
+* **Added:** Configured an asynchronous AJAX form processing module utilizing JavaScript `fetch` API methods.
+* **Added:** Set up complete On-Page and Technical SEO features including optimized `<title>` configurations, descriptive `<meta>` elements, `robots.txt`, and a structural `sitemap.xml` roadmap file.
+* **Fixed:** Resolved structural formatting and mobile grid overlapping issues flagged during Part 2 grading reviews.
+
 ---
 
 ## Timeline and Milestones
@@ -139,17 +160,7 @@ Home
 
 ## Reference List
 
-Department of Social Development, 2026. *National Register of Non-Profit Organisations: Sephaphoshe Old Age & Day Care Centre (Reg No: 098-244)*. Pretoria: Department of Social Development.
-
-Hollywoodbets Foundation, 2024. *Hollywoodbets Foundation empowers Sephaphoshe Old Age Centre in Limpopo*. Available at: <https://hollywoodfoundation.co.za> [Accessed 11 August 2026].
-
-Limpopo Department of Social Development, 2026. *Registered Service Centres for Older Persons: Capricorn District*. Polokwane: Limpopo Provincial Government.
-
-The Independent Institute of Education, 2026. *Web Development (WEDE5020) Portfolio of Evidence Manual*. Sandton: IIE.
-
-World Wide Web Consortium, 2023. *Web Content Accessibility Guidelines (WCAG) 2.2*. Available at: <https://w3.org> [Accessed 11 August 2026].
-
-### In-Text Citation Quick Reference
-* **For History/NPO Registration:** ...as stated by the Department of Social Development (2026).
-* **For Corporate Funding:** ...infrastructure support was provided by the Hollywoodbets Foundation (2024).
-* **For Code/Design Standards:** ...adhering directly to global accessibility metrics (World Wide Web Consortium, 2023).
+* Department of Social Development, 2026. *National Register of Non-Profit Organisations: Sephaphoshe Old Age & Day Care Centre (Reg No: 098-244)*. Pretoria: Department of Social Development.
+* Hollywoodbets Foundation, 2026. *Corporate Social Investment Impact Reports: Community Facility Infrastructure Development Grants*. Durban: Hollywoodbets.
+* Leaflet, 2026. *Leaflet JS Open-Source Interactive Map Library Documentation*. Available at: [leafletjs.com](https://leafletjs.com) [Accessed 27 October 2026].
+* W3Schools, 2026. *How To Create an AJAX Form Submission Guide*. Available at: [w3schools.com](https://w3schools.com) [Accessed 27 October 2026].
