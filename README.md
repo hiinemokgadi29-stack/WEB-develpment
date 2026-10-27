@@ -1,4 +1,4 @@
-<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/ca88f546-a49d-4c8f-9cf2-376c6a493a48" /># Sephaphoshe NPO Web Development Project
+# Sephaphoshe NPO Web Development Project
 
 ## Student Information
 * **Student Name:** HIINE MOKGADI PRUDENCE
