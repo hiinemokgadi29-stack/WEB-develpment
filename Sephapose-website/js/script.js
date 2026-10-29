@@ -112,31 +112,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ---------------------------------------------------------
+    // ---------------------------------------------------------
     // 4. FORMS ARCHITECTURE & STRICT CLIENT-SIDE VALIDATION / AJAX
     // ---------------------------------------------------------
-    const enquiryForm = document.querySelector("form"); // Targets enquiry or contact forms
+    const forms = document.querySelectorAll("form");
 
-    if (enquiryForm && !enquiryForm.id?.includes("searchForm")) {
-        // Create status feedback element inside form
+    forms.forEach(form => {
+        if (form.id === "searchForm") return;
+
         const feedbackDiv = document.createElement("div");
-        feedbackDiv.id = "form-feedback";
+        feedbackDiv.className = "form-feedback";
         feedbackDiv.style.cssText = "margin-top: 1rem; padding: 0.8rem; border-radius: 4px; font-weight: bold; display: none;";
-        enquiryForm.appendChild(feedbackDiv);
+        form.appendChild(feedbackDiv);
 
-        enquiryForm.addEventListener("submit", function (e) {
+        form.addEventListener("submit", function (e) {
             e.preventDefault();
 
-            // Clear previous errors
             feedbackDiv.style.display = "none";
             feedbackDiv.className = "";
 
-            // Collect form fields
-            const nameInput = enquiryForm.querySelector("#name") || enquiryForm.querySelector("input[type='text']");
-            const emailInput = enquiryForm.querySelector("#email") || enquiryForm.querySelector("input[type='email']");
-            const phoneInput = enquiryForm.querySelector("#phone") || enquiryForm.querySelector("input[type='tel']");
-            const messageInput = enquiryForm.querySelector("#message") || enquiryForm.querySelector("textarea");
+            const nameInput = form.querySelector("input[type='text']") || form.querySelector("input[name='name']");
+            const emailInput = form.querySelector("input[type='email']") || form.querySelector("input[name='email']");
+            const phoneInput = form.querySelector("input[type='tel']") || form.querySelector("input[name='phone']");
+            const messageInput = form.querySelector("textarea");
 
-            // Strict Validation checks
             let errors = [];
 
             if (nameInput && nameInput.value.trim().length < 2) {
@@ -166,20 +165,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            // Simulate Asynchronous AJAX Request (fetch simulation with loading state)
             feedbackDiv.style.display = "block";
             feedbackDiv.style.backgroundColor = "#fff3cd";
             feedbackDiv.style.color = "#856404";
-            feedbackDiv.textContent = "Submitting enquiry asynchronously via AJAX...";
+            feedbackDiv.textContent = "Submitting form asynchronously via AJAX...";
 
             setTimeout(() => {
                 feedbackDiv.style.backgroundColor = "#d4edda";
                 feedbackDiv.style.color = "#155724";
-                feedbackDiv.innerHTML = "<strong>Success!</strong> Your enquiry has been securely submitted. Thank you for partnering with Sephapose Old Age Care Centre.";
-                enquiryForm.reset();
+                feedbackDiv.innerHTML = "<strong>Success!</strong> Your message/enquiry has been securely processed and sent to Sephapose Old Age Care Centre.";
+                form.reset();
             }, 1200);
         });
-    }
+    });
 
     // ---------------------------------------------------------
     // 5. ACCORDION / COLLAPSIBLE UI POLISH (about.html / services.html)

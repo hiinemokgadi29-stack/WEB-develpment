@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://prudencehiine.github.io/WEB-develpment/sitemap.xml
